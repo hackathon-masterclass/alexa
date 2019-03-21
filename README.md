@@ -1,3 +1,5 @@
 This repository contains code snippets for the masterclass on Alexa skills
 
-* [index.js](index.js) - this is the initial code used in video 07 on Alexa Responses.  Copy it to your local computer to edit and then zip with necessary `node_modules`
+* [index.js](index.js) - this is the initial code used in video 09 on Alexa Request Handlers (Code).  Copy it to your local computer to edit and then zip with necessary `node_modules`
+
+* [addIndex.js](addIndex.js) - this is additional code snippets to copy and paste into your `index.js` file as described in video 11 on Slot Resolution
