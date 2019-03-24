@@ -1,5 +1,19 @@
 const Alexa = require('ask-sdk-core');
 
+const WeatherIntentHandler = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+      && handlerInput.requestEnvelope.request.intent.name === 'WeatherIntent';
+  },
+  handle(handlerInput) {
+    const speechText = 'Expect it to be pink today!';
+
+    return handlerInput.responseBuilder
+      .speak(speechText)
+      .getResponse();
+  },
+};
+
 const LaunchRequestHandler = {
   canHandle(handlerInput) {
     return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
@@ -11,20 +25,6 @@ const LaunchRequestHandler = {
     return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(repromptText)
-      .getResponse();
-  },
-};
-
-const WeatherIntentHandler = {
-  canHandle(handlerInput) {
-    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
-      && handlerInput.requestEnvelope.request.intent.name === 'WeatherIntent';
-  },
-  handle(handlerInput) {
-    const speechText = 'Expect it to be pink today!';
-
-    return handlerInput.responseBuilder
-      .speak(speechText)
       .getResponse();
   },
 };

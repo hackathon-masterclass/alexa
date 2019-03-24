@@ -6,7 +6,7 @@ const WeatherIntentHandler = {
   handle(handlerInput) {
     const colorChoices = ['pink', 'gray', 'blue', 'green', 'purple'];
     const color = Math.floor(colorChoices.length * Math.random());
-    const timeSlot = handlerInput.requestEnvelope.request.intent.slots.time;
+    const slots = handlerInput.requestEnvelope.request.intent.slots;
     let date = '';
 
     if ('time' in slots) {
