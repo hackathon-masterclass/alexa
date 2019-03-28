@@ -6,7 +6,7 @@ const WeatherIntentHandler = {
       && handlerInput.requestEnvelope.request.intent.name === 'WeatherIntent';
   },
   handle(handlerInput) {
-    const speechText = 'Expect it to be pink today!';
+    const speechText = 'There is a fifty percent chance of pink today!';
 
     return handlerInput.responseBuilder
       .speak(speechText)
